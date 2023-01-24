@@ -1,0 +1,217 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --pale-blue-transparent: hsla(225, 100%, 94%, 0.1);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-hover: hsl(245, 83%, 68%);
+  --bright-blue-shadow: hsla(245, 75%, 52%, 0.3);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* Fonts */
+  --font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  font-family: var(--font-family);
+  background-color: var(--pale-blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: 1.25rem;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+main {
+  width: 100%;
+  max-width: 25rem;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--very-pale-blue);
+  border-radius: 1.25rem;
+  padding-bottom: 2.1875rem;
+  box-shadow: 0 5px 40px var(--bright-blue-shadow);
+}
+
+.card__image img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+}
+
+.card__textbox {
+  padding: 1.875rem;
+}
+
+.card__textbox h1 {
+  font-size: 1.375rem;
+  text-align: center;
+  color: var(--dark-blue);
+  margin-bottom: 0.9375rem;
+}
+
+.card__textbox p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--desaturated-blue);
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+
+.card__plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.9375rem;
+}
+
+.card__plan .card__annual {
+  display: flex;
+}
+
+.card__annual .card__annual-img img {
+  width: 100%;
+  height: auto;
+}
+
+.card__annual .card__annual-text {
+  margin-left: 0.9375rem;
+}
+
+.card__annual .card__annual-text h3 {
+  font-size: 0.9375rem;
+  color: var(--dark-blue);
+}
+.card__annual .card__annual-text p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.card__plan .card__plan--btn {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--bright-blue);
+  margin-bottom: 0.4375rem;
+
+  transition: 300ms;
+}
+
+.card__CTA {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 1.25rem;
+}
+
+.card__CTA .card__payment--btn {
+  border: none;
+  outline: none;
+
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--very-pale-blue);
+
+  background-color: var(--bright-blue);
+  border-radius: 0.675rem;
+  box-shadow: 0 10px 20px var(--bright-blue-shadow);
+
+  padding: 1.0625rem 0;
+  margin-bottom: 1.5625rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.card__CTA .card__cancel--btn {
+  border: none;
+  outline: none;
+  background: none;
+
+  font-family: var(--font-family);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+
+  transition: 300ms;
+  cursor: pointer;
+}
+
+/* Hover */
+
+.card__plan .card__plan--btn:hover {
+  text-decoration: none;
+  color: var(--bright-blue-hover);
+}
+
+.card__CTA .card__cancel--btn:hover {
+  color: var(--dark-blue);
+}
+
+.card__CTA .card__payment--btn:hover {
+  background-color: var(--bright-blue-hover);
+}
+
+.attribution {
+  text-align: center;
+
+  margin-top: 1.875rem;
+}
+
+.attribution div p {
+  color: var(--dark-blue);
+}
+
+.attribution div span {
+  font-size: 1.25rem;
+  color: var(--bright-blue);
+}
+
+.attribution div a {
+  font-size: 1.25rem;
+  color: var(--bright-blue);
+  text-decoration: none;
+
+  transition: 300ms;
+}
+
+.attribution div a:hover {
+  text-decoration: underline;
+}
