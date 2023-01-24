@@ -44,8 +44,8 @@ This is the Screenshot of the projects a made!
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/order-summary-component-VuS9Df9WiP)
+- Live Site URL: [Add live site URL here](https://fem-order-summary-component-seven.vercel.app/)
 
 ## Author
 
